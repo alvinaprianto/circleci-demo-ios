@@ -9,6 +9,7 @@ jobs:
       FASTLANE_LANE: test
     steps:
       - checkout
+      - run: gem install bundler
       - run: bundle install
       - run:
           name: Fastlane
@@ -26,6 +27,7 @@ jobs:
       FASTLANE_LANE: adhoc
     steps:
       - checkout
+      - run: gem install bundler
       - run: bundle install
       - run:
           name: Fastlane
